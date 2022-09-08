@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		BC34523128C963D600C310BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34523028C963D600C310BB /* AppDelegate.swift */; };
 		BC34523328C963D600C310BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34523228C963D600C310BB /* SceneDelegate.swift */; };
-		BC34523528C963D600C310BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34523428C963D600C310BB /* ViewController.swift */; };
-		BC34523828C963D600C310BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC34523628C963D600C310BB /* Main.storyboard */; };
+		BC34523528C963D600C310BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34523428C963D600C310BB /* LoginViewController.swift */; };
 		BC34523A28C963D800C310BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC34523928C963D800C310BB /* Assets.xcassets */; };
 		BC34523D28C963D800C310BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC34523B28C963D800C310BB /* LaunchScreen.storyboard */; };
+		BC34524628C9666000C310BB /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = BC34524528C9666000C310BB /* FacebookCore */; };
+		BC34524828C9666000C310BB /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = BC34524728C9666000C310BB /* FacebookLogin */; };
+		BC34524C28C9E7EB00C310BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34524B28C9E7EB00C310BB /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC34522D28C963D600C310BB /* HotelInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC34523028C963D600C310BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC34523228C963D600C310BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC34523428C963D600C310BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC34523728C963D600C310BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC34523428C963D600C310BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC34523928C963D800C310BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC34523C28C963D800C310BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC34523E28C963D800C310BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC34524928C96C8E00C310BB /* HotelInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HotelInfo.entitlements; sourceTree = "<group>"; };
+		BC34524B28C9E7EB00C310BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC34524828C9666000C310BB /* FacebookLogin in Frameworks */,
+				BC34524628C9666000C310BB /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +61,24 @@
 		BC34522F28C963D600C310BB /* HotelInfo */ = {
 			isa = PBXGroup;
 			children = (
+				BC34524A28C9E78A00C310BB /* Controllers */,
+				BC34524928C96C8E00C310BB /* HotelInfo.entitlements */,
 				BC34523028C963D600C310BB /* AppDelegate.swift */,
 				BC34523228C963D600C310BB /* SceneDelegate.swift */,
-				BC34523428C963D600C310BB /* ViewController.swift */,
-				BC34523628C963D600C310BB /* Main.storyboard */,
+				BC34523428C963D600C310BB /* LoginViewController.swift */,
 				BC34523928C963D800C310BB /* Assets.xcassets */,
 				BC34523B28C963D800C310BB /* LaunchScreen.storyboard */,
 				BC34523E28C963D800C310BB /* Info.plist */,
 			);
 			path = HotelInfo;
+			sourceTree = "<group>";
+		};
+		BC34524A28C9E78A00C310BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC34524B28C9E7EB00C310BB /* HomeViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +97,10 @@
 			dependencies = (
 			);
 			name = HotelInfo;
+			packageProductDependencies = (
+				BC34524528C9666000C310BB /* FacebookCore */,
+				BC34524728C9666000C310BB /* FacebookLogin */,
+			);
 			productName = HotelInfo;
 			productReference = BC34522D28C963D600C310BB /* HotelInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +129,9 @@
 				Base,
 			);
 			mainGroup = BC34522428C963D600C310BB;
+			packageReferences = (
+				BC34524428C9666000C310BB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = BC34522E28C963D600C310BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +148,6 @@
 			files = (
 				BC34523D28C963D800C310BB /* LaunchScreen.storyboard in Resources */,
 				BC34523A28C963D800C310BB /* Assets.xcassets in Resources */,
-				BC34523828C963D600C310BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC34523528C963D600C310BB /* ViewController.swift in Sources */,
+				BC34523528C963D600C310BB /* LoginViewController.swift in Sources */,
 				BC34523128C963D600C310BB /* AppDelegate.swift in Sources */,
 				BC34523328C963D600C310BB /* SceneDelegate.swift in Sources */,
+				BC34524C28C9E7EB00C310BB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BC34523628C963D600C310BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC34523728C963D600C310BB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BC34523B28C963D800C310BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HotelInfo/HotelInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X65M7V9954;
@@ -294,7 +308,6 @@
 				INFOPLIST_FILE = HotelInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HotelInfo/HotelInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X65M7V9954;
@@ -322,7 +336,6 @@
 				INFOPLIST_FILE = HotelInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +373,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC34524428C9666000C310BB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC34524528C9666000C310BB /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC34524428C9666000C310BB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		BC34524728C9666000C310BB /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC34524428C9666000C310BB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC34522528C963D600C310BB /* Project object */;
 }
